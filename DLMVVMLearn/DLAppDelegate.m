@@ -7,9 +7,20 @@
 //
 
 #import "DLAppDelegate.h"
+#import "DLNavigationControllerStack.h"
+#import "DLViewModelServicesImpl.h"
+#import "DLViewModel.h"
 #import "ViewController.h"
+#import "DLLoginViewModel.h"
 
 @interface DLAppDelegate ()
+
+@property (nonatomic, strong) DLViewModelServicesImpl *services;
+@property (nonatomic, strong) DLViewModel *viewModel;
+
+@property (nonatomic, strong, readwrite) DLNavigationControllerStack *navigationControllerStack;
+
+@property (nonatomic, copy, readwrite) NSString *adURL;
 
 @end
 
@@ -18,15 +29,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    self.services = [[DLViewModelServicesImpl alloc] init];
+    self.navigationControllerStack = [[DLNavigationControllerStack alloc] initWithServices:self.services];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ViewController *vc = [[ViewController alloc] init];
-    vc.view.backgroundColor = [UIColor redColor];
-    self.window.rootViewController = vc;
+    [self.services resetRootViewModel:[self createInitialViewModel]];
+    
+//    UIViewController *vc = [[UIViewController alloc] init];
+//    vc.view.backgroundColor = [UIColor redColor];
+//    self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     
     return YES;
 }
 
+- (DLViewModel *)createInitialViewModel {
+    return [[DLLoginViewModel alloc] initWithServices:self.services params:nil];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

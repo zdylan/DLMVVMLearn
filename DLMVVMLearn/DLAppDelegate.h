@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DLNavigationControllerStack.h"
 
 @interface DLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic, strong, readonly) DLNavigationControllerStack *navigationControllerStack;
 
 @end
 
