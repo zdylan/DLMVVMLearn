@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3B8FA5BA3DADBAC594938712 /* Pods_DLMVVMLearnTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABEB76A51F2FA0CEB03D956 /* Pods_DLMVVMLearnTests.framework */; };
+		531BABC91F04085E0036E93E /* DLRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 531BABC81F04085E0036E93E /* DLRouter.m */; };
+		531BABCC1F040B460036E93E /* DLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531BABCB1F040B460036E93E /* DLNavigationController.m */; };
+		531BABCF1F040BF50036E93E /* DLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531BABCE1F040BF50036E93E /* DLTabBarController.m */; };
 		EC303679236CA882D9AA8578 /* Pods_DLMVVMLearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583FB3B130414A5CEC549A8E /* Pods_DLMVVMLearn.framework */; };
 		FC8930A11F02B0B300907573 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8930A01F02B0B300907573 /* main.m */; };
 		FC8930A41F02B0B300907573 /* DLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8930A31F02B0B300907573 /* DLAppDelegate.m */; };
-		FC8930A71F02B0B300907573 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8930A61F02B0B300907573 /* ViewController.m */; };
 		FC8930AC1F02B0B300907573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8930AB1F02B0B300907573 /* Assets.xcassets */; };
 		FC8930AF1F02B0B300907573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8930AD1F02B0B300907573 /* LaunchScreen.storyboard */; };
 		FC8930BA1F02B0B300907573 /* DLMVVMLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8930B91F02B0B300907573 /* DLMVVMLearnTests.m */; };
@@ -38,6 +40,12 @@
 
 /* Begin PBXFileReference section */
 		0DEFA10487BFA7DE76484560 /* Pods-DLMVVMLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLMVVMLearn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLMVVMLearn/Pods-DLMVVMLearn.debug.xcconfig"; sourceTree = "<group>"; };
+		531BABC71F04085E0036E93E /* DLRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRouter.h; sourceTree = "<group>"; };
+		531BABC81F04085E0036E93E /* DLRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRouter.m; sourceTree = "<group>"; };
+		531BABCA1F040B460036E93E /* DLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNavigationController.h; sourceTree = "<group>"; };
+		531BABCB1F040B460036E93E /* DLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNavigationController.m; sourceTree = "<group>"; };
+		531BABCD1F040BF50036E93E /* DLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabBarController.h; sourceTree = "<group>"; };
+		531BABCE1F040BF50036E93E /* DLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabBarController.m; sourceTree = "<group>"; };
 		583FB3B130414A5CEC549A8E /* Pods_DLMVVMLearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLMVVMLearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2F8452C1D41760B96EB973 /* Pods-DLMVVMLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLMVVMLearn.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLMVVMLearn/Pods-DLMVVMLearn.release.xcconfig"; sourceTree = "<group>"; };
 		AABEB76A51F2FA0CEB03D956 /* Pods_DLMVVMLearnTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLMVVMLearnTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,8 +55,6 @@
 		FC8930A01F02B0B300907573 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC8930A21F02B0B300907573 /* DLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAppDelegate.h; sourceTree = "<group>"; };
 		FC8930A31F02B0B300907573 /* DLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLAppDelegate.m; sourceTree = "<group>"; };
-		FC8930A51F02B0B300907573 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FC8930A61F02B0B300907573 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FC8930AB1F02B0B300907573 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC8930AE1F02B0B300907573 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC8930B01F02B0B300907573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,8 +156,6 @@
 				FC8930CF1F02B57300907573 /* ViewModel */,
 				FC8930A21F02B0B300907573 /* DLAppDelegate.h */,
 				FC8930A31F02B0B300907573 /* DLAppDelegate.m */,
-				FC8930A51F02B0B300907573 /* ViewController.h */,
-				FC8930A61F02B0B300907573 /* ViewController.m */,
 				FC8930AB1F02B0B300907573 /* Assets.xcassets */,
 				FC8930AD1F02B0B300907573 /* LaunchScreen.storyboard */,
 				FC89309F1F02B0B300907573 /* Supporting Files */,
@@ -196,6 +200,8 @@
 			children = (
 				FC8930E21F02C63800907573 /* DLConstant.h */,
 				FC8931001F03EE9200907573 /* DLConfig.h */,
+				531BABC71F04085E0036E93E /* DLRouter.h */,
+				531BABC81F04085E0036E93E /* DLRouter.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -226,6 +232,10 @@
 			children = (
 				FC8930E61F03935000907573 /* DLNavigationControllerStack.h */,
 				FC8930E71F03935000907573 /* DLNavigationControllerStack.m */,
+				531BABCA1F040B460036E93E /* DLNavigationController.h */,
+				531BABCB1F040B460036E93E /* DLNavigationController.m */,
+				531BABCD1F040BF50036E93E /* DLTabBarController.h */,
+				531BABCE1F040BF50036E93E /* DLTabBarController.m */,
 				FC8930F81F03D60E00907573 /* DLViewController.h */,
 				FC8930F91F03D60E00907573 /* DLViewController.m */,
 			);
@@ -305,7 +315,7 @@
 					};
 					FC8930B41F02B0B300907573 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = N3VMDF986B;
+						DevelopmentTeam = 942CC4H6H8;
 						ProvisioningStyle = Automatic;
 						TestTargetID = FC89309B1F02B0B300907573;
 					};
@@ -450,8 +460,9 @@
 			files = (
 				FC8930D51F02B82300907573 /* DLViewModel.m in Sources */,
 				FC8930E81F03935000907573 /* DLNavigationControllerStack.m in Sources */,
-				FC8930A71F02B0B300907573 /* ViewController.m in Sources */,
+				531BABC91F04085E0036E93E /* DLRouter.m in Sources */,
 				FC8930F71F03D4A400907573 /* DLLoginViewModel.m in Sources */,
+				531BABCC1F040B460036E93E /* DLNavigationController.m in Sources */,
 				FC8930A41F02B0B300907573 /* DLAppDelegate.m in Sources */,
 				FC8930E01F02BE9700907573 /* DLAppStoreServiceImpl.m in Sources */,
 				FC8930FE1F03E5FE00907573 /* DLLoginViewController.m in Sources */,
@@ -459,6 +470,7 @@
 				FC8930EB1F03983800907573 /* DLViewModelServicesImpl.m in Sources */,
 				FC8930FA1F03D60E00907573 /* DLViewController.m in Sources */,
 				FC8930DC1F02BDEF00907573 /* DLRepositoryServiceImpl.m in Sources */,
+				531BABCF1F040BF50036E93E /* DLTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,7 +627,7 @@
 			baseConfigurationReference = C4ED552C76A76D7F12F697EB /* Pods-DLMVVMLearnTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = N3VMDF986B;
+				DEVELOPMENT_TEAM = 942CC4H6H8;
 				INFOPLIST_FILE = DLMVVMLearnTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meiauto.DLMVVMLearnTests;
@@ -629,7 +641,7 @@
 			baseConfigurationReference = CC95154C84445F601F467774 /* Pods-DLMVVMLearnTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = N3VMDF986B;
+				DEVELOPMENT_TEAM = 942CC4H6H8;
 				INFOPLIST_FILE = DLMVVMLearnTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meiauto.DLMVVMLearnTests;

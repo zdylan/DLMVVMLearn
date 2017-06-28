@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DLLoginViewController">
             <connections>
+                <outlet property="avatarButton" destination="sWQ-Yg-lLd" id="3l7-cy-H10"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,15 +20,48 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSj-bd-Pd4">
-                    <rect key="frame" x="16" y="203" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUX-Em-ios">
+                    <rect key="frame" x="0.0" y="237.5" width="375" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="5XI-ze-k6a"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWQ-Yg-lLd" userLabel="Avatar Button">
+                    <rect key="frame" x="144.5" y="112.5" width="85" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="0cm-oU-nAj"/>
+                        <constraint firstAttribute="height" constant="85" id="O0h-7T-31y"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="590-I7-Sjl" userLabel="Login Button">
+                    <rect key="frame" x="16" y="359.5" width="343" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3hc-A7-04l"/>
+                    </constraints>
+                    <state key="normal" title="Log In"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w58-s4-FLt">
+                    <rect key="frame" x="93" y="622" width="189" height="30"/>
+                    <state key="normal" title="OAuth2 Authorization Login">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="590-I7-Sjl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="1dZ-qK-MCO"/>
+                <constraint firstItem="590-I7-Sjl" firstAttribute="top" secondItem="ZUX-Em-ios" secondAttribute="bottom" constant="22" id="4sc-aX-3xj"/>
+                <constraint firstItem="w58-s4-FLt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E2g-Qq-v1V"/>
+                <constraint firstAttribute="trailing" secondItem="590-I7-Sjl" secondAttribute="trailing" constant="16" id="FRn-Bk-Ssm"/>
+                <constraint firstAttribute="bottom" secondItem="w58-s4-FLt" secondAttribute="bottom" constant="15" id="HS3-Wm-gnL"/>
+                <constraint firstItem="ZUX-Em-ios" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cyN-Ou-GTH"/>
+                <constraint firstAttribute="centerY" secondItem="ZUX-Em-ios" secondAttribute="centerY" constant="46" id="kIy-Xg-UHC"/>
+                <constraint firstItem="sWQ-Yg-lLd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rbx-aU-O8E"/>
+                <constraint firstAttribute="trailing" secondItem="ZUX-Em-ios" secondAttribute="trailing" id="viW-p7-YyX"/>
+                <constraint firstItem="ZUX-Em-ios" firstAttribute="top" secondItem="sWQ-Yg-lLd" secondAttribute="bottom" constant="40" id="yol-72-l2P"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

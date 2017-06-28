@@ -7,7 +7,7 @@
 //
 
 #import "DLNavigationControllerStack.h"
-#import "DLAppDelegate.h"
+#import "DLTabBarController.h"
 
 @interface DLNavigationControllerStack () <UINavigationControllerDelegate>
 
@@ -44,33 +44,22 @@
 }
 
 - (void)registerNavigationHooks {
-//    @weakify(self)
-    
-    
+    @weakify(self)
     [[(NSObject *)self.services
         rac_signalForSelector:@selector(resetRootViewModel:)]
         subscribeNext:^(RACTuple *tuple) {
-            
-            NSLog(@"tuple-------_> %@", tuple);
-            
-            UIViewController *vc = [[UIViewController alloc] init];
-            vc.view.backgroundColor = [UIColor yellowColor];
+            @strongify(self)
+            [self.navigationControllers removeAllObjects];
 
-            DLSharedAppDelegate.window.rootViewController = vc;
-        }];
-    
-    
-//    [[(NSObject *)self.services
-//        rac_signalForSelector:@selector(resetRootViewModel:)]
-//        subscribeNext:^(RACTuple *tuple) {
-////            @strongify(self)
-//            [self.navigationControllers removeAllObjects];
-//
-////            UIViewController *viewController = (UIViewController *)
-//            
-////            DLSharedAppDelegate.window.rootViewController = vc;
-//            DLSharedAppDelegate.window.rootViewController = [[UIViewController alloc] init];
-//        }];
+            UIViewController *viewController = (UIViewController *)[DLRouter.sharedInstance viewControllerForViewModel:tuple.first];
+            if (![viewController isKindOfClass:[UINavigationController class]] &&
+                ![viewController isKindOfClass:[DLTabBarController class]]) {
+                viewController = [[DLNavigationController alloc] initWithRootViewController:viewController];
+                [self pushNavigationController:(UINavigationController *)viewController];
+            }
+            DLSharedAppDelegate.window.rootViewController = viewController;
+        }
+     ];
 }
 
 @end

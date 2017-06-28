@@ -7,31 +7,47 @@
 //
 
 #import "DLLoginViewController.h"
+#import "DLLoginViewModel.h"
 
 @interface DLLoginViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *avatarButton;
+
+@property (nonatomic, strong, readonly) DLLoginViewModel *viewModel;
 
 @end
 
 @implementation DLLoginViewController
 
+@dynamic viewModel;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.avatarButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.avatarButton.layer.borderWidth = 2.0f;
+
+    self.avatarButton.imageView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
-/*
-#pragma mark - Navigation
+- (void)bindViewModel {
+    [super bindViewModel];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    @weakify(self)
+    [RACObserve(self.viewModel, avatarURL) subscribeNext:^(NSURL *avatarURL) {
+        @strongify(self)
+//        [self.avatarButton sd_]
+        [self.avatarButton setImage:[UIImage imageNamed:@"avatar-default"] forState:UIControlStateNormal];
+    }];
 }
-*/
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
+}
 
 @end

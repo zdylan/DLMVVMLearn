@@ -10,6 +10,7 @@ target 'DLMVVMLearn' do
   # pod 'ReactiveObjC', '~> 3.0.0'
   pod 'OctoKit', '~> 0.5'
   pod 'YYKit'
+  pod 'SDWebImage', '~> 4.0.0'
 
   target 'DLMVVMLearnTests' do
     inherit! :search_paths
