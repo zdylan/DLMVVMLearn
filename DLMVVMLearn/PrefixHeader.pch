@@ -20,8 +20,14 @@
     #import <ReactiveCocoa/ReactiveCocoa.h>
     #import <ReactiveCocoa/RACEXTScope.h>
     #import <AFNetworking/AFNetworking.h>
+    #import <SAMKeychain/SAMKeychain.h>
     #import <OctoKit/OctoKit.h>
     #import <YYKit/YYKit.h>
+    #import <OcticonsIOS/UIImage+Octions.h>
+    #import <OcticonsIOS/NSString+Octicons.h>
+    #import "UIImage+DLOcticons.h"
+    #import "SAMKeychain+DLUtil.h"
+    #import "DLUtil.h"
     #import "DLAppDelegate.h"
     #import "DLViewModel.h"
     #import "DLConstant.h"
@@ -29,6 +35,7 @@
     #import "DLViewModelServices.h"
     #import "DLRouter.h"
     #import "DLNavigationController.h"
+    #import "OCTUser+DLPersistence.h"
 
 #endif
 

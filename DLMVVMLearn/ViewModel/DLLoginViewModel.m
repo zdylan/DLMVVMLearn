@@ -23,6 +23,8 @@
 
 - (void)initialize {
     [super initialize];
+
+//    RAC(self, avatarURL) = [[RACObserve(self, username)]]
 }
 
 @end

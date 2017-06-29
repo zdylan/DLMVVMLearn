@@ -13,6 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *avatarButton;
 
+@property (weak, nonatomic) IBOutlet UIImageView *usernameImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *passwordImageView;
+
 @property (nonatomic, strong, readonly) DLLoginViewModel *viewModel;
 
 @end
@@ -27,7 +30,10 @@
     self.avatarButton.layer.borderColor = [UIColor whiteColor].CGColor;
     self.avatarButton.layer.borderWidth = 2.0f;
 
-    self.avatarButton.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.avatarButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+
+//    self.usernameImageView.image = [UIImage octicon_imageWithIdentifier:@"Person" size:CGSizeMake(22, 22)];
+    self.passwordImageView.image = [UIImage octicon_imageWithIdentifier:@"Lock" size:CGSizeMake(22, 22)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

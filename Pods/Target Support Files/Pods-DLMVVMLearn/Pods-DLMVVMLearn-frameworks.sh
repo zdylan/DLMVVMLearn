@@ -92,8 +92,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ISO8601DateFormatter/ISO8601DateFormatter.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Mantle/Mantle.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/OcticonsIOS/OcticonsIOS.framework"
   install_framework "$BUILT_PRODUCTS_DIR/OctoKit/OctoKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReactiveCocoa/ReactiveCocoa.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SAMKeychain/SAMKeychain.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
   install_framework "$BUILT_PRODUCTS_DIR/YYKit/YYKit.framework"
 fi
@@ -101,8 +103,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ISO8601DateFormatter/ISO8601DateFormatter.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Mantle/Mantle.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/OcticonsIOS/OcticonsIOS.framework"
   install_framework "$BUILT_PRODUCTS_DIR/OctoKit/OctoKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReactiveCocoa/ReactiveCocoa.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SAMKeychain/SAMKeychain.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
   install_framework "$BUILT_PRODUCTS_DIR/YYKit/YYKit.framework"
 fi

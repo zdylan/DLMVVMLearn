@@ -11,6 +11,10 @@
 		531BABC91F04085E0036E93E /* DLRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 531BABC81F04085E0036E93E /* DLRouter.m */; };
 		531BABCC1F040B460036E93E /* DLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531BABCB1F040B460036E93E /* DLNavigationController.m */; };
 		531BABCF1F040BF50036E93E /* DLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531BABCE1F040BF50036E93E /* DLTabBarController.m */; };
+		531BABD21F05578B0036E93E /* SAMKeychain+DLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 531BABD11F05578B0036E93E /* SAMKeychain+DLUtil.m */; };
+		531BABD51F055DCB0036E93E /* DLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 531BABD41F055DCB0036E93E /* DLUtil.m */; };
+		531BABD81F0560FF0036E93E /* OCTUser+DLPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 531BABD71F0560FF0036E93E /* OCTUser+DLPersistence.m */; };
+		531BABDC1F056BFD0036E93E /* UIImage+DLOcticons.m in Sources */ = {isa = PBXBuildFile; fileRef = 531BABDB1F056BFD0036E93E /* UIImage+DLOcticons.m */; };
 		EC303679236CA882D9AA8578 /* Pods_DLMVVMLearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583FB3B130414A5CEC549A8E /* Pods_DLMVVMLearn.framework */; };
 		FC8930A11F02B0B300907573 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8930A01F02B0B300907573 /* main.m */; };
 		FC8930A41F02B0B300907573 /* DLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8930A31F02B0B300907573 /* DLAppDelegate.m */; };
@@ -46,6 +50,15 @@
 		531BABCB1F040B460036E93E /* DLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNavigationController.m; sourceTree = "<group>"; };
 		531BABCD1F040BF50036E93E /* DLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabBarController.h; sourceTree = "<group>"; };
 		531BABCE1F040BF50036E93E /* DLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabBarController.m; sourceTree = "<group>"; };
+		531BABD01F05578B0036E93E /* SAMKeychain+DLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAMKeychain+DLUtil.h"; sourceTree = "<group>"; };
+		531BABD11F05578B0036E93E /* SAMKeychain+DLUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAMKeychain+DLUtil.m"; sourceTree = "<group>"; };
+		531BABD31F055DCB0036E93E /* DLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUtil.h; sourceTree = "<group>"; };
+		531BABD41F055DCB0036E93E /* DLUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtil.m; sourceTree = "<group>"; };
+		531BABD61F0560FF0036E93E /* OCTUser+DLPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTUser+DLPersistence.h"; sourceTree = "<group>"; };
+		531BABD71F0560FF0036E93E /* OCTUser+DLPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTUser+DLPersistence.m"; sourceTree = "<group>"; };
+		531BABD91F05614D0036E93E /* DLPersistenceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLPersistenceProtocol.h; sourceTree = "<group>"; };
+		531BABDA1F056BFD0036E93E /* UIImage+DLOcticons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DLOcticons.h"; sourceTree = "<group>"; };
+		531BABDB1F056BFD0036E93E /* UIImage+DLOcticons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DLOcticons.m"; sourceTree = "<group>"; };
 		583FB3B130414A5CEC549A8E /* Pods_DLMVVMLearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLMVVMLearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2F8452C1D41760B96EB973 /* Pods-DLMVVMLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLMVVMLearn.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLMVVMLearn/Pods-DLMVVMLearn.release.xcconfig"; sourceTree = "<group>"; };
 		AABEB76A51F2FA0CEB03D956 /* Pods_DLMVVMLearnTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLMVVMLearnTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +204,9 @@
 				FC8930DD1F02BE6D00907573 /* DLAppStoreService.h */,
 				FC8930DE1F02BE9700907573 /* DLAppStoreServiceImpl.h */,
 				FC8930DF1F02BE9700907573 /* DLAppStoreServiceImpl.m */,
+				531BABD91F05614D0036E93E /* DLPersistenceProtocol.h */,
+				531BABD61F0560FF0036E93E /* OCTUser+DLPersistence.h */,
+				531BABD71F0560FF0036E93E /* OCTUser+DLPersistence.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +218,12 @@
 				FC8931001F03EE9200907573 /* DLConfig.h */,
 				531BABC71F04085E0036E93E /* DLRouter.h */,
 				531BABC81F04085E0036E93E /* DLRouter.m */,
+				531BABD01F05578B0036E93E /* SAMKeychain+DLUtil.h */,
+				531BABD11F05578B0036E93E /* SAMKeychain+DLUtil.m */,
+				531BABD31F055DCB0036E93E /* DLUtil.h */,
+				531BABD41F055DCB0036E93E /* DLUtil.m */,
+				531BABDA1F056BFD0036E93E /* UIImage+DLOcticons.h */,
+				531BABDB1F056BFD0036E93E /* UIImage+DLOcticons.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -463,14 +485,18 @@
 				531BABC91F04085E0036E93E /* DLRouter.m in Sources */,
 				FC8930F71F03D4A400907573 /* DLLoginViewModel.m in Sources */,
 				531BABCC1F040B460036E93E /* DLNavigationController.m in Sources */,
+				531BABD51F055DCB0036E93E /* DLUtil.m in Sources */,
 				FC8930A41F02B0B300907573 /* DLAppDelegate.m in Sources */,
+				531BABD81F0560FF0036E93E /* OCTUser+DLPersistence.m in Sources */,
 				FC8930E01F02BE9700907573 /* DLAppStoreServiceImpl.m in Sources */,
+				531BABDC1F056BFD0036E93E /* UIImage+DLOcticons.m in Sources */,
 				FC8930FE1F03E5FE00907573 /* DLLoginViewController.m in Sources */,
 				FC8930A11F02B0B300907573 /* main.m in Sources */,
 				FC8930EB1F03983800907573 /* DLViewModelServicesImpl.m in Sources */,
 				FC8930FA1F03D60E00907573 /* DLViewController.m in Sources */,
 				FC8930DC1F02BDEF00907573 /* DLRepositoryServiceImpl.m in Sources */,
 				531BABCF1F040BF50036E93E /* DLTabBarController.m in Sources */,
+				531BABD21F05578B0036E93E /* SAMKeychain+DLUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

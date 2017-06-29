@@ -10,7 +10,6 @@
 #import "DLNavigationControllerStack.h"
 #import "DLViewModelServicesImpl.h"
 #import "DLViewModel.h"
-#import "ViewController.h"
 #import "DLLoginViewModel.h"
 
 @interface DLAppDelegate ()
@@ -29,6 +28,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
+    
     self.services = [[DLViewModelServicesImpl alloc] init];
     self.navigationControllerStack = [[DLNavigationControllerStack alloc] initWithServices:self.services];
 
@@ -44,7 +45,12 @@
 }
 
 - (DLViewModel *)createInitialViewModel {
-    return [[DLLoginViewModel alloc] initWithServices:self.services params:nil];
+    if ([SAMKeychain rawLogin].isExist && [SAMKeychain accessToken].isExist) {
+//        OCTUser *user = [OCTUser dl_userWithRawLogin:[SAMKeychain rawLogin] server: OCTServer.dotComServer];
+    }
+//    } else {
+        return [[DLLoginViewModel alloc] initWithServices:self.services params:nil];
+//    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

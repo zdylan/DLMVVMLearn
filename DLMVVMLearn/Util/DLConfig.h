@@ -11,8 +11,12 @@
 
 /// AppDelegate
 ///------------
-
-
 #define DLSharedAppDelegate ((DLAppDelegate *)[UIApplication sharedApplication].delegate)
+
+// SAMKeychain
+#define DL_SERVICE_NAME @"com.zdylan.DLMVVMLearn"
+#define DL_RAW_LOGIN    @"RawLogin"
+#define DL_PASSWORD     @"Password"
+#define DL_ACCESS_TOKEN @"AccessToken"
 
 #endif /* DLConfig_h */

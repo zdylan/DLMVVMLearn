@@ -11,6 +11,8 @@ target 'DLMVVMLearn' do
   pod 'OctoKit', '~> 0.5'
   pod 'YYKit'
   pod 'SDWebImage', '~> 4.0.0'
+  pod 'SAMKeychain', '~> 1.5.2'
+  pod 'OcticonsIOS', '~> 0.0.2'
 
   target 'DLMVVMLearnTests' do
     inherit! :search_paths
